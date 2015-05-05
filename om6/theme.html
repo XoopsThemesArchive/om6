@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<style type="text/css">
+<!--
+body {
+	margin-left: 50px;
+	margin-top: 0px;
+	margin-right: 50px;
+	margin-bottom: 0px;
+	background-color: #808080;
+}
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+}
+a:link {
+	color: #000099;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000099;
+}
+a:hover {
+	text-decoration: none;
+	color: #00CC00;
+}
+a:active {
+	text-decoration: none;
+	color: #000099;
+}
+-->
+</style><{$xoops_module_header}>
+</head>
+<body>
+
+<div align="center">
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="228" background="themes/om6/img/headbg.jpg"><img src="themes/om6/img/header.jpg" width="295" height="140"></td>
+      <td width="100%" background="themes/om6/img/headbg.jpg">&nbsp;</td>
+      <td width="339" background="themes/om6/img/headbg.jpg"><img src="themes/om6/img/header2.jpg" width="355" height="140"></td>
+    </tr>
+  </table>
+  <table width="650"  border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="6" background="themes/om6/img/border.gif" bgcolor="#666666"><p><img src="themes/om6/img/border.gif" width="10" height="3"></p>
+      <p>&nbsp;</p></td>
+      <td width="100%"><table width="630" cellspacing="0" class="maintable">
+        <tr>
+          <!-- Display left blocks start-->
+<{if $xoops_showlblock == 1}>
+      <td bgcolor="#D3F7B9" id="leftcolumn">
+        <!-- Start left blocks loop -->
+<{foreach item=block from=$xoops_lblocks}> <{include file="om6/blocks/theme_blockleft.html"}> <{/foreach}>
+        <!-- End left blocks loop -->
+      </td>
+<{/if}>
+      <!-- Display left blocks end -->
+      <td bgcolor="#A6FF80" id="centercolumn">
+        <!-- Display center blocks if any -->
+<{if $xoops_showcblock == 1}>
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+              <!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}> <{include file="om6/blocks/theme_blockcenter_c.html"}> <{/foreach}>
+              <!-- End center-center blocks loop -->
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+              <!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}> <{include file="om6/blocks/theme_blockcenter_l.html"}> <{/foreach}>
+              <!-- End center-left blocks loop -->
+            </td>
+            <td id="centerRcolumn">
+              <!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}> <{include file="om6/blocks/theme_blockcenter_r.html"}> <{/foreach}>
+              <!-- End center-right blocks loop -->
+            </td>
+          </tr>
+        </table>
+<{/if}>
+        <!-- End display center blocks -->
+        <div id="content"> <{$xoops_contents}> </div></td>
+      <!-- Display right blocks start-->
+<{if $xoops_showrblock == 1}>
+      <td bgcolor="#D3F7B9" id="rightcolumn">
+        <!-- Start right blocks loop -->
+<{foreach item=block from=$xoops_rblocks}> <{include file="om6/blocks/theme_blockright.html"}> <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+<{/if}>
+      <!-- Display right blocks end-->
+        </tr>
+      </table></td>
+      <td width="5" background="themes/om6/img/border2.gif" bgcolor="#666666"><img src="themes/om6/img/border2.gif" width="10" height="3"></td>
+    </tr>
+  </table>
+  <table width="650"  border="0" cellspacing="0" cellpadding="0">
+    <tr id="footertable">
+      <td width="10" background="themes/om6/img/border.gif"><img src="themes/om6/img/border.gif" width="10" height="3"></td>
+      <td width="100%" height="32" valign="bottom" background="themes/om6/img/footer.gif"><div align="center"></div></td>
+      <td width="10" background="themes/om6/img/border2.gif"><div align="right"><img src="themes/om6/img/border2.gif" width="10" height="3"></div></td>
+    </tr>
+  </table>
+  <br>
+  design by <a href="http://www.omnetwork.net">omnetwork.net</a>  </div>
+</body>
+</html>
